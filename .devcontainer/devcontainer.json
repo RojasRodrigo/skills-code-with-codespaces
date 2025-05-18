@@ -1,23 +1,26 @@
 {
   // Name this configuration
   "name": "Codespace for Skills!",
-  
+
   // Use the base codespace image
   "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
 
   "remoteUser": "codespace",
   "overrideCommand": false,
 
-"customizations": {
-  "vscode": {
-    "extensions": [
-      "GitHub.copilot"
-    ]
-  },
-  "codespaces": {
-    "openFiles": [
-      "codespace.md"
-    ]
-   }
+  // Ejecutar este comando al crear el codespace
+  "postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot"
+      ]
+    },
+    "codespaces": {
+      "openFiles": [
+        "codespace.md"
+      ]
+    }
   }
 }
